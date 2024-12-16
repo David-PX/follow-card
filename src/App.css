@@ -36,14 +36,36 @@
     transition: .3 ease background-color;
 }
 
-.ds-followCard-button.is-following {
-    border: 1px solid red;
+.ds-followCard-button:hover {
+    opacity: .8;
 }
 
 .ds-followCard-button:hover {
-    background-color: #09f;
+    opacity: .8;
+}
+
+.ds-followCard-button.is-following {
+    border: 1px solid #bbb;
+    background: transparent;
+    color: white;
+    width: 140px;
 }
 
 .ds-followCard-button.is-following:hover {
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.178);
+    color: red;
+    border: 1px solid red;
+    transition: .3s ease all;
+}
+
+.ds-followCard-button.is-following:hover .ds-followCard-text {
+    display: none;
+}
+
+.ds-followCard-button.is-following:hover .ds-followCard-stopFollow {
+    display: block;
+}
+
+.ds-followCard-stopFollow {
+    display: none;
 }
